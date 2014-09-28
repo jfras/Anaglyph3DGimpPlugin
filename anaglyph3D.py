@@ -18,10 +18,10 @@ def do_work(image,drawable):
             v0 = [points[1][0]-points[0][0], points[1][1] - points[0][1]]
             v1 = [points[3][0]-points[2][0], points[3][1] - points[2][1]]
             l = sqrt(v0[0]**2 + v0[1]**2)
-            if atan2(v1[0], v1[1]) in (-pi/2, pi/2):
+            if -pi/2 < atan2(v1[1], v1[0]) < pi/2.0:
                 angle = asin(v1[1]/l) - atan2( v0[1], v0[0])
             else:
-                angle = pi - asin(v1[1]/l) - atan2( v0[1], v0[0])
+                angle = pi - ( asin(v1[1]/l) - atan2( v0[1], v0[0]))
 
             pdb.gimp_drawable_transform_rotate_default(layers[0], angle, 0, points[0][0], points[0][1], 1, 0)
             #if len(points) >= 6:
