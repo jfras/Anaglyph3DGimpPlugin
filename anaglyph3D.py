@@ -54,7 +54,7 @@ register(
         (PF_DRAWABLE, "drawable", "Input", None),
     ],
     [],
-    do_work, menu="<Toolbox>/Moje")
+    do_work, menu="<Toolbox>/3D Tools")
 
 
 main()
