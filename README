@@ -1,0 +1,14 @@
+Gimp python plugin
+
+1. Create image composed of two layers: 
+  * Top layer - left eye, red colour. 
+  * Bottom layer - right eye, greem colour.
+
+[2. - optional - Show 4 points using path tool:
+   * first point - both layers common point on top layer - layers will be translated to cover corresponding point from bottom layer (see third point),
+   * second point - fixed height point on first layer - layers will be rotated to set corresponding point from bottom layer on the same y coordinate level (see fourth point)
+   * third point - both layers common point on bottom layer,
+   * fourth point - fixed height point on bottom layer.]
+    
+3. Select "Create 3D" option from "3D Tools" menu.
+   
