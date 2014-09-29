@@ -21,9 +21,10 @@ def do_work(image,drawable):
             if -pi/2 < atan2(v1[1], v1[0]) < pi/2.0:
                 angle = asin(v1[1]/l) - atan2( v0[1], v0[0])
             else:
-                angle = pi - ( asin(v1[1]/l) - atan2( v0[1], v0[0]))
+                angle = pi - asin(v1[1]/l) - atan2( v0[1], v0[0])
 
-            pdb.gimp_drawable_transform_rotate_default(layers[0], angle, 0, points[0][0], points[0][1], 1, 0)
+            pdb.gimp_drawable_transform_rotate_default(layers[0], angle/2, 0, points[0][0], points[0][1], 1, 0)
+            pdb.gimp_drawable_transform_rotate_default(layers[1], -angle/2, 0, points[2][0], points[2][1], 1, 0)
             #if len(points) >= 6:
             pdb.gimp_layer_translate(layers[0],  (points[2][0] - points[0][0])/2,  (points[2][1] - points[0][1])/2)
             pdb.gimp_layer_translate(layers[1], -(points[2][0] - points[0][0])/2, -(points[2][1] - points[0][1])/2)
@@ -38,6 +39,7 @@ def do_work(image,drawable):
     gimp.Display(composed)
     pdb.gimp_image_delete(image)
     pdb.gimp_image_delete(composed)
+    pdb.gimp_image_delete(gimp.image_list()[0])
 
 
 register(
