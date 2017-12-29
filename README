@@ -4,11 +4,11 @@ Gimp python plugin
   * Top layer - left eye, red colour. 
   * Bottom layer - right eye, greem colour.
 
-[2. - optional - Show 4 points using path tool:
-   * first point - both layers common point on top layer - layers will be translated to cover corresponding point from bottom layer (see third point),
-   * second point - fixed height point on first layer - layers will be rotated to set corresponding point from bottom layer on the same y coordinate level (see fourth point)
-   * third point - both layers common point on bottom layer,
-   * fourth point - fixed height point on bottom layer.]
+[2. - optional - Point 4 points using path tool:
+   * first key point on the top layer - layers will be translated to match this point on both layers,
+   * second key point on the top layer - layers will be rotated to level this point on both layers
+   * second key point on the bottom layer,
+   * first key point on the bottom layer]
     
 3. Select "Create 3D" option from "3D Tools" menu.
    
